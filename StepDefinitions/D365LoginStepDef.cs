@@ -6,11 +6,11 @@ using Microsoft.Playwright.NUnit;
 namespace PlayWrightFramework.StepDefinitions
 {
     [Binding]
-    public sealed class CalculatorStepDefinitions:PageTest
+    public sealed class D365LoginStepDef:PageTest
     {
         private readonly PlaywrightDriver playwrightDriver;
 
-        public CalculatorStepDefinitions(PlaywrightDriver playwrightDriver)
+        public D365LoginStepDef(PlaywrightDriver playwrightDriver)
         {
             this.playwrightDriver = playwrightDriver;
         }
@@ -55,6 +55,8 @@ namespace PlayWrightFramework.StepDefinitions
             await page.GetByText("Registered").ClickAsync();
 
             await Expect(page.GetByText("Registered")).ToBeVisibleAsync();
+
+            //comments added
 
 
         }
